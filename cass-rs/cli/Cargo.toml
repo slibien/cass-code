@@ -4,7 +4,7 @@ name = "cass-cli"
 version = { workspace = true }
 
 [[bin]]
-name = "codex"
+name = "cass"
 path = "src/main.rs"
 
 [lib]

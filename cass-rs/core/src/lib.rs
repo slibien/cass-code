@@ -1,4 +1,4 @@
-//! Root of the `codex-core` library.
+//! Root of the `cass-core` library.
 
 // Prevent accidental direct writes to stdout/stderr in library code. All
 // user-visible output must go through the appropriate abstraction (e.g.,
@@ -11,7 +11,7 @@ pub mod bash;
 mod chat_completions;
 mod client;
 mod client_common;
-pub mod codex;
+pub mod cass_mod;
 mod cass_conversation;
 pub use cass_conversation::CassConversation;
 mod cass_delegate;
@@ -99,7 +99,7 @@ pub use client_common::Prompt;
 pub use client_common::REVIEW_PROMPT;
 pub use client_common::ResponseEvent;
 pub use client_common::ResponseStream;
-pub use codex::compact::content_items_to_text;
+pub use cass_mod::compact::content_items_to_text;
 pub use cass_protocol::models::ContentItem;
 pub use cass_protocol::models::LocalShellAction;
 pub use cass_protocol::models::LocalShellExecAction;
