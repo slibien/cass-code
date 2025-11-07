@@ -1,0 +1,59 @@
+[package]
+edition = "2024"
+name = "cass-cli"
+version = { workspace = true }
+
+[[bin]]
+name = "codex"
+path = "src/main.rs"
+
+[lib]
+name = "cass_cli"
+path = "src/lib.rs"
+
+[lints]
+workspace = true
+
+[dependencies]
+anyhow = { workspace = true }
+clap = { workspace = true, features = ["derive"] }
+clap_complete = { workspace = true }
+cass-app-server = { workspace = true }
+cass-app-server-protocol = { workspace = true }
+cass-arg0 = { workspace = true }
+cass-chatgpt = { workspace = true }
+cass-cloud-tasks = { path = "../cloud-tasks" }
+cass-common = { workspace = true, features = ["cli"] }
+cass-core = { workspace = true }
+cass-exec = { workspace = true }
+cass-login = { workspace = true }
+cass-mcp-server = { workspace = true }
+cass-process-hardening = { workspace = true }
+cass-protocol = { workspace = true }
+cass-protocol-ts = { workspace = true }
+cass-responses-api-proxy = { workspace = true }
+cass-rmcp-client = { workspace = true }
+cass-stdio-to-uds = { workspace = true }
+cass-tui = { workspace = true }
+ctor = { workspace = true }
+owo-colors = { workspace = true }
+serde_json = { workspace = true }
+supports-color = { workspace = true }
+toml = { workspace = true }
+tokio = { workspace = true, features = [
+    "io-std",
+    "macros",
+    "process",
+    "rt-multi-thread",
+    "signal",
+] }
+
+[target.'cfg(target_os = "windows")'.dependencies]
+cass_windows_sandbox = { package = "cass-windows-sandbox", path = "../windows-sandbox-rs" }
+
+[dev-dependencies]
+assert_cmd = { workspace = true }
+assert_matches = { workspace = true }
+predicates = { workspace = true }
+pretty_assertions = { workspace = true }
+tempfile = { workspace = true }

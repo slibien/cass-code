@@ -1,0 +1,21 @@
+[package]
+edition = "2024"
+name = "cass-protocol-ts"
+version = { workspace = true }
+
+[lints]
+workspace = true
+
+[lib]
+name = "cass_protocol_ts"
+path = "src/lib.rs"
+
+[[bin]]
+name = "cass-protocol-ts"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = { workspace = true }
+clap = { workspace = true, features = ["derive"] }
+cass-app-server-protocol = { workspace = true }
+ts-rs = { workspace = true }

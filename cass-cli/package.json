@@ -1,0 +1,21 @@
+{
+  "name": "@orion-ai/cass-code",
+  "version": "0.0.0-dev",
+  "license": "Apache-2.0",
+  "bin": {
+    "cass": "bin/cass.js"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=16"
+  },
+  "files": [
+    "bin",
+    "vendor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slibien/cass-code.git",
+    "directory": "cass-cli"
+  }
+}

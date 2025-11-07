@@ -13,7 +13,7 @@ export class Codex {
   private options: CodexOptions;
 
   constructor(options: CodexOptions = {}) {
-    this.exec = new CodexExec(options.codexPathOverride);
+    this.exec = new CodexExec(options.cassPathOverride);
     this.options = options;
   }
 
@@ -27,7 +27,7 @@ export class Codex {
 
   /**
    * Resumes a conversation with an agent based on the thread id.
-   * Threads are persisted in ~/.codex/sessions.
+   * Threads are persisted in ~/.cass/sessions.
    *
    * @param id The id of the thread to resume.
    * @returns A new thread instance.
